@@ -40,7 +40,6 @@ public class EmployeeController {
         }
         return null;
     }
-
     @PutMapping("/{employee-id}")
     public Employee updateEmployeeById(@PathVariable("employee-id") Long employeeId,
                                        @RequestBody EmployeeRequest Request){
@@ -71,13 +70,9 @@ public class EmployeeController {
         for (Employee employee: EMPLOYEE_LIST){
             if (employee.getName().toLowerCase().contains(name.toLowerCase())){
                 employees.add(employee);
-
             }
         }
-
         return employees;
     }
-
-
 
 }
